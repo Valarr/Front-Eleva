@@ -1,0 +1,35 @@
+<form [formGroup]="schoolForm" (submit)="submitForm()">
+  <div class="card">
+    <div class="card-header">Criar escola</div>
+
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="name">Name</label>
+          <input type="text" class="form-control"
+            id="name"
+            formControlName="nome_escola"
+            placeholder="Nome da escola" />
+        </div>
+
+        <div class="form-group col-md-8">
+          <label for="description">Endereço</label>
+          <input type="text" class="form-control" id="description" formControlName="endereco"
+            placeholder="Endereço" />
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="telefone">Telefone</label>
+          <input type="tel" class="form-control" id="description" formControlName="telefone"
+            placeholder="00-000000" />
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-dark btn-lg mt-3">
+      Criar
+    </button>
+  </div>
+  <button type="button" class="btn btn-secondary btn-lg mt-1" (click)="onSelectVoltar()">Voltar</button>
+
+</form>
