@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import School from 'src/app/api/escolaApi';
+
 type escolaHeader = "id_escola"|"nome_escola"|"telefone"|"endereco";
 type escolaData = {[x in escolaHeader]:string}
 type tableHeader = {[x in escolaHeader]:string}
+
 @Component({
   selector: 'app-school-list',
   templateUrl: './school-list.component.html',
